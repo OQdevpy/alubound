@@ -8,13 +8,13 @@ populate_dict:
 # 	sudo supervisorctl restart backend
 
 run:
-	python manage.py runserver 8000
+	python3 manage.py runserver 8000
 
 migrations:
-	python manage.py makemigrations
+	python3 manage.py makemigrations
 
 migrate:
-	python manage.py migrate
+	python3 manage.py migrate
 
 
 commit_name := $(filter-out $@,$(MAKECMDGOALS))
