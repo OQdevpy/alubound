@@ -1,4 +1,7 @@
 from django.db import models
+# import ckeditor
+from ckeditor.fields import RichTextField
+
 
 # Create your models here.
 class Partner(models.Model):
@@ -14,7 +17,7 @@ class Galareya(models.Model):
 class New(models.Model):
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='images/')
-    description = models.TextField()
+    description = RichTextField()
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -22,7 +25,7 @@ class New(models.Model):
     
 class About(models.Model):
     title = models.CharField(max_length=100)
-    description = models.TextField()
+    description = RichTextField()
     image = models.ImageField(upload_to='images/')
 
     def __str__(self):
@@ -39,7 +42,7 @@ class Category(models.Model):
 class Product(models.Model):
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='images/')
-    description = models.TextField()
+    description = RichTextField()
     price = models.IntegerField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True)

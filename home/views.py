@@ -2,29 +2,30 @@ from django.shortcuts import render
 
 from home.serializers import *
 from .models import *
-from rest_framework.generics import ListAPIView,RetrieveAPIView
+from rest_framework.mixins import ListModelMixin,RetrieveModelMixin
+from rest_framework.viewsets import GenericViewSet
 # Create your views here.
 
-class GalareyaListView(ListAPIView,RetrieveAPIView):
+class GalareyaListView(ListModelMixin,RetrieveModelMixin,GenericViewSet):
     queryset = Galareya.objects.all()
     serializer_class = GalareyaSerializer
 
-class NewListView(ListAPIView,RetrieveAPIView):
+class NewListView(ListModelMixin,RetrieveModelMixin,GenericViewSet):
     queryset = New.objects.all()
     serializer_class = NewSerializer
 
-class AboutListView(ListAPIView,RetrieveAPIView):
+class AboutListView(ListModelMixin,RetrieveModelMixin,GenericViewSet):
     queryset = About.objects.all()
     serializer_class = AboutSerializer
 
-class CategoryListView(ListAPIView,RetrieveAPIView):
+class CategoryListView(ListModelMixin,RetrieveModelMixin,GenericViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
-class ProductListView(ListAPIView,RetrieveAPIView):
+class ProductListView(ListModelMixin,RetrieveModelMixin,GenericViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
-class PartnerListView(ListAPIView,RetrieveAPIView):
+class PartnerListView(ListModelMixin,RetrieveModelMixin,GenericViewSet):
     queryset = Partner.objects.all()
     serializer_class = PartnerSerializer

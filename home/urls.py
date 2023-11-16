@@ -1,13 +1,20 @@
 from django.urls import path
 from .views import *
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+router.register('galareya', GalareyaListView)
+router.register('new', NewListView)
+router.register('about', AboutListView)
+router.register('category', CategoryListView)
+router.register('product', ProductListView)
+router.register('partner', PartnerListView)
+
 
 urlpatterns = [
-    path('galareya/', GalareyaListView.as_view(), name='galareya'),
-    path('new/', NewListView.as_view(), name='new'),
-    path('about/', AboutListView.as_view(), name='about'),
-    path('category/', CategoryListView.as_view(), name='category'),
-    path('product/', ProductListView.as_view(), name='product'),
-    path('partner/', PartnerListView.as_view(), name='partner'),
-    
     
 ]
+
+urlpatterns += router.urls
+
+
