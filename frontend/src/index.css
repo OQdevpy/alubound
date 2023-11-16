@@ -1,0 +1,102 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/Gilroy-Regular.ttf") format("ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/Gilroy-BlackItalic.ttf") format("ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/Gilroy-LightItalic.ttf") format("ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/Gilroy-SemiBoldItalic.ttf") format("ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/Gilroy-Medium.ttf") format("ttf");
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Gilroy", sans-serif !important;
+  background-color: #f5fbfd !important;
+}
+* {
+  font-family: "Gilroy", sans-serif !important;
+}
+
+.css-olzc2a span {
+  font-family: "Unbounded" !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.big-container {
+  width: 100%;
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.slick-slide {
+  margin: 0 10px;
+}
+
+.css-zgjiqu {
+  margin-top: 4px !important;
+}
+
+.slick-list {
+  margin-bottom: -90px !important;
+}
+
+.partner-link {
+  background-color: #c3242a;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 12px 30px;
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 999;
+}
