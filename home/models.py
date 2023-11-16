@@ -14,7 +14,7 @@ class Galareya(models.Model):
 class New(models.Model):
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='images/')
-    content = models.TextField()
+    description = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -22,7 +22,7 @@ class New(models.Model):
     
 class About(models.Model):
     title = models.CharField(max_length=100)
-    content = models.TextField()
+    description = models.TextField()
     image = models.ImageField(upload_to='images/')
 
     def __str__(self):
@@ -39,7 +39,7 @@ class Category(models.Model):
 class Product(models.Model):
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='images/')
-    content = models.TextField()
+    description = models.TextField()
     price = models.IntegerField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True)
